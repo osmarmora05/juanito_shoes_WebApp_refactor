@@ -15,6 +15,8 @@ import Reports from "./pages/dashboard/Reports";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import RecoverAccount from "./pages/RecoverAccount";
+import LayoutDashboard from "./components/LayoutDashboard";
+
 
 function App() {
   return (
@@ -43,7 +45,7 @@ function AppContent() {
         path="/Panel"
         element={
           <ProtectRouted>
-            <NavBar />
+            <LayoutDashboard />
           </ProtectRouted>
         }
       >
