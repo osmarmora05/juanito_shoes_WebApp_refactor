@@ -19,8 +19,9 @@
     }
     h3{
         top:  -200px;
-        left: 1px;
+        left: -25px;
         position: absolute;
+        font-size: medium;
         
     }
     
@@ -39,7 +40,17 @@
         top: 0;
         right: 0;
     }
-    
+    .label-pass{
+        position: absolute;
+        top: -20px;
+    }
+    #input-email{
+    position: relative;
+    top: -20px;
+    left: -0px;
+    width: 300px;
+
+    }
     .container-caja {
     width: 90%; /* Cambié el ancho a un porcentaje para mantener el responsive */
     max-width: 600px; /* Añadí un ancho máximo para mantener la escala en dispositivos grandes */

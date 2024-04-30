@@ -18,10 +18,12 @@ export default function InformacionEmpresa() {
         <div className="container-caja">
           <div className="formulario-inner">
             <h3>Recupera tu contraseña si has olvidado tu contraseña</h3>
-            <h4>Enviar codigo para poder reestablecer contrasena</h4>
-            <input type="email" name="Email" id="input-email" />
+            <div className="container-pass">
+              <label className="label-pass"htmlFor="">Email</label>
+            <input type="email" title="Email" name="Email" id="input-email"/>
                 <div className="container-button">
-                  <button type="submit">Login</button>
+                  <button type="submit">Enviar Codigo</button>
+                  </div>
                   </div>
 
           </div>

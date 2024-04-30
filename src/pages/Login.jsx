@@ -62,22 +62,17 @@ export default function Login() {
                     id = "username-login"
                   />
                   <ErrorMessage name="username" component="div" />
-
                   <div className="Password-sss">
+                    <div className="password-box__container">
                   <PasswordBox
                   title="Password"
                   name="password"
                   placeHolder="ingresa tu contrasena"
-                  //handleOnchange={handleChange}
-                  //value={password}
                   />
-                  <ErrorMessage name="password" component="div" />
-
+                    <div className="password-box__eye"></div> 
                   </div>
-
-
-                
-
+                  <ErrorMessage name="password" component="div" />
+                  </div>
                   <Link to="/OlvidadoTuContraseña">
                     ¿Has olvidado tu contraseña?
                   </Link>

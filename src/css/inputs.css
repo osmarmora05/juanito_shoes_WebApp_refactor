@@ -53,18 +53,26 @@
     color: var(--fuenteOscuro);
 }
 
-.password-box__input {
-    width: 200px;
+.password-box__container {
+    position: relative; 
+    width:430px;/* Asegura que el contenedor del input de contraseña sea relativo */
 }
 
+.password-box__input {
+    display: inline-block;
+    width: 100%; /* Hacer que el ancho sea igual al del campo de usuario */
+    padding-right: 40px; /* Espacio para el icono del ojo */
+
+}
 .password-box__label + label {
     display: block;
     position: relative;
-    width: 20rem;
+    width: 20rem; /* Esto puede no ser necesario si el ancho de tu campo de usuario es suficiente */
 }
 
 .password-box__eye {
     position: absolute;
-    right: -140px;
-    top: 5.5px;
+    right: 10px; /* Ajusta la posición del icono del ojo */
+    top: 50%; /* Ajusta verticalmente al centro */
+    transform: translateY(-50%);
 }
