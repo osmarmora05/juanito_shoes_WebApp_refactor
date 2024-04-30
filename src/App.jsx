@@ -1,3 +1,4 @@
+import "./css/styles.css";
 import { Route, Routes, Navigate } from "react-router-dom";
 import {
   AuthContextProvider,
@@ -17,7 +18,7 @@ import "../src/css/styles.css";
 import ForgotPassword from "./pages/ForgotPassword";
 import RecoverAccount from "./pages/RecoverAccount";
 import LayoutDashboard from "./components/LayoutDashboard";
-
+import ManagementItems from "./pages/dashboard/ManagementItems";
 
 
 function App() {
@@ -66,6 +67,9 @@ function AppContent() {
         )}
         {hasAccess(["admin", "supervisor"]) && (
           <Route path="Trabajadores" element={<Stock />} />
+        )}
+        {hasAccess(["supervisor"]) && (
+          <Route path="GestionDeElementos" element={<ManagementItems />} />
         )}
         {hasAccess(["admin", "supervisor"]) && (
           <Route path="DatosEmpresa" element={<GeneralCompanyInformation />} />

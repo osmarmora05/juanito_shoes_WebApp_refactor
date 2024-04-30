@@ -9,6 +9,7 @@
     display: block;
     padding: 0.25rem 0.75rem 0.25rem 0.75rem;
     max-width: 20rem;
+    max-width: 48rem;
     width: 100%;
     border: 1px solid var(--trazo);
     border-radius: calc(0.5rem - 2px);
@@ -22,7 +23,11 @@
 .textbox-search__label + label  {
     display: block;
     position: relative;
+
     width: 320px;
+
+    width: 100%;
+
 }
 
 .textbox-search__label + label > svg {
@@ -53,6 +58,7 @@
     color: var(--fuenteOscuro);
 }
 
+
 .password-box__container {
     position: relative; 
     width:430px;/* Asegura que el contenedor del input de contraseña sea relativo */
@@ -68,11 +74,25 @@
     display: block;
     position: relative;
     width: 20rem; /* Esto puede no ser necesario si el ancho de tu campo de usuario es suficiente */
+.password-box__input {
+    padding-right: 2.5rem;
+}
+
+.password-box__label + label {
+    display: block;
+    position: relative;
+    width: 20rem;
 }
 
 .password-box__eye {
     position: absolute;
+
     right: 10px; /* Ajusta la posición del icono del ojo */
     top: 50%; /* Ajusta verticalmente al centro */
     transform: translateY(-50%);
 }
+
+    right: 10px;
+    top: 5.5px;
+}
+
