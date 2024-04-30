@@ -1,0 +1,19 @@
+.screen-header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.screen-header__title {
+    font-size: var(--h1-fontsize);
+    color: var(--fuenteNormal);
+    font-weight: 800;
+}
+
+.screen-header__description {
+    font-size: var(--h2-fontsize);
+    color: var(--fuenteOscuro);
+}
