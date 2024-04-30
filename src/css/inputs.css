@@ -1,0 +1,70 @@
+.textbox__label,.textarea__label,.textbox-search__label,.password-box__label {
+    display: block;
+    color: var(--fuenteNormal);
+    margin-bottom: 5px;
+    font-size: (var(--text-fontSize));
+}
+
+.textbox__input,.textarea__input,.textbox-search__input,.password-box__input  {
+    display: block;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    max-width: 20rem;
+    width: 100%;
+    border: 1px solid var(--trazo);
+    border-radius: calc(0.5rem - 2px);
+    font-size: var(--text-fontSize);
+}
+
+.textbox-search__input {
+    padding-left: 2.5rem;
+}
+
+.textbox-search__label + label  {
+    display: block;
+    position: relative;
+    width: 320px;
+}
+
+.textbox-search__label + label > svg {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 5.5px;
+    bottom: 0;
+}
+
+.textarea__input {
+    height: 110px;
+}
+
+.textbox__input, .textbox-search__input,.password-box__input {
+    height: 2.25rem;
+}
+
+.textarea__input {
+    resize: none;
+}
+
+.textbox__input:focus,.textarea__input:focus,.password-box__input:focus,.textbox-search__input:focus {
+    outline: 1px solid var(--trazo);
+}
+
+.textbox__input::placeholder,.textarea__input::placeholder,.password-box__input::placeholder {
+    color: var(--fuenteOscuro);
+}
+
+.password-box__input {
+    width: 200px;
+}
+
+.password-box__label + label {
+    display: block;
+    position: relative;
+    width: 20rem;
+}
+
+.password-box__eye {
+    position: absolute;
+    right: -140px;
+    top: 5.5px;
+}

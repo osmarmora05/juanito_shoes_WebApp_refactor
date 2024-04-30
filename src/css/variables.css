@@ -1,20 +1,20 @@
 :root {
-  --backgroundNormal: white;
-  --backgroundButtonSecondary: #09090b;
-  --backgroundButtonPrimary: #fafafa;
-  --fontColorButtonPrimary: #222225;
-  --fontColorButtonSecondary: #fff;
-  --fontDark: #87878e;
-  --fontNormal: #0f172a;
-  --gray: #3f3f45;
-  --red: #e11d48;
-  --blue: #3b82f6;
-  --green: #22c55e;
-  --orange: #ea580c;
-  --purple: #6d28d9;
-  --outline: #e6ebf1;
-  --menuColorSelection: #e2e8f0;
+  --fondoNormal: white;
+  --fondoBotonPrimario: #09090B;
+  --fondoBotonSecundario: #FAFAFA;
+  --fuenteBotonPrimario: #fff;
+  --fuenteBotonSecundario: #222225;
+  --fuenteOscuro: #87878E;
+  --fuenteNormal: #0F172A;
+  --colorSelecion: #3F3F45;
+  --colorSeleccion2: #E11D48;
+  --colorSelecion3: #3B82F6;
+  --colorSelecion4: #22C55E;
+  --colorSelecion5: #EA580C;
+  --colorSeleccion6: #6D28D9;
+  --trazo: #E6EBF1;
+  --colorMenu: #E2E8F0;
   --h1-fontsize: 2rem;
   --h2-fontsize: 1.2rem;
-  --text-fontSize: 0.9rem;
+  --text-fontSize: .9rem;
 }

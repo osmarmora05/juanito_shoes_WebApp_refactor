@@ -13,9 +13,11 @@ import NotFound from "./pages/404";
 import GeneralCompanyInformation from "./pages/dashboard/GeneralCompanyInformation";
 import Reports from "./pages/dashboard/Reports";
 import Login from "./pages/Login";
+import "../src/css/styles.css";
 import ForgotPassword from "./pages/ForgotPassword";
 import RecoverAccount from "./pages/RecoverAccount";
 import LayoutDashboard from "./components/LayoutDashboard";
+
 
 
 function App() {
@@ -37,10 +39,11 @@ function AppContent() {
   return (
     <Routes>
       <Route path="/" element={<Navigate replace to="Login" />} />
+      <Route path="Login" element={<Login />} />
+      <Route path="/OlvidadoTuContraseña" element={<ForgotPassword />} />
+      <Route path="/RecuperarCuenta" element={<RecoverAccount />} />
+      
       <Route path="*" element={<NotFound />} />
-      <Route path="Login/" element={<Login />} />
-      <Route path="Login/OlvidadoTuContraseña" element={<ForgotPassword />} />
-      <Route path="Login/RecuperarCuenta" element={<RecoverAccount />} />
       <Route
         path="/Panel"
         element={
