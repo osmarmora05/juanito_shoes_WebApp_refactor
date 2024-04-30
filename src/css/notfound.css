@@ -1,0 +1,42 @@
+.not-found {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.not-found__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.not-found__404-icon-and-title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.not-found__404 {
+    color: var(--colorSelecion3);
+    font-size: var(--h1-fontsize);
+    font-weight: 800;
+    height: 100%;
+    vertical-align: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found__text {
+    font-size: var(--h2-fontsize);
+    font-weight: 800;
+    color: var(--fuenteNormal);
+    text-align: center;
+}

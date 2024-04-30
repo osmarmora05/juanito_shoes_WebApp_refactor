@@ -1,42 +1,45 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import "../css/inputs.css";
+import "../css/login.css";
+import { Formik, Form } from "formik";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify"; // Importa ToastContainer y toast
-import "react-toastify/dist/ReactToastify.css";
 import JuanitoStoreImage from "../../public/JuanitoStore.png";
 import React, { useState } from "react";
-import "../css/inputs.css"
-import "../css/login.css";
 import { PasswordBox } from "../components/ui/inputs";
-
-import "../components/ui/Icons";
-
+import { getSpecificUser } from "../services/db";
+import { Toaster, toast } from "sonner";
+import { useAuthContenxt } from "../context/ContextAuthenticatedUser";
 
 export default function Login() {
-
+  const { login, user } = useAuthContenxt();
   const navigate = useNavigate();
 
-  const handleForgotPassword = () => {
-    navigate("/OlvidadoTuContraseña");
-  };
+  async function onSubmit(email, password) {
+    try {
+      const result = await getSpecificUser(email, password);
 
-  const handleSubmit = (values, { setSubmitting }) => {
-    if (!values.username || !values.password) {
-      toast.error("Por favor, complete todos los campos."); // Mostrar mensaje de error con toast
-      setSubmitting(false);
-      return;
+      if (result === null) {
+        toast.warning("Oye! Parace que no estas registrado", {
+          description:
+            "Por que no intentas nuevamente o contactas con soporte tecnico",
+        });
+      } else {
+        login({
+          id: result[0].id,
+          Nombre: result[0].Nombre,
+          Rol: result[0].Rol,
+        });
+      }
+
+      navigate("/Panel");
+    } catch (error) {
+      console.error(
+        "Hubo un error al obtener la información del usuario:",
+        error
+      );
     }
-
-    setTimeout(() => {
-      setSubmitting(false);
-      navigate("/app/*");
-      toast.success("¡Inicio de sesión exitoso!");
-    }, 400);
-  };
-
+  }
   return (
     <div className="container">
-      <ToastContainer /> {/* Agrega el componente ToastContainer aquí */}
       <div className="imagen-empresa">
         <img src={JuanitoStoreImage} alt="juantistore" />
         <div className="capa-opaca"></div>
@@ -47,39 +50,83 @@ export default function Login() {
           <div className="formulario-inner">
             <h2>Iniciar Sesión</h2>
             <Formik
-              initialValues={{ username: "", password: "" }}
-              validationSchema={Yup.object({
-                username: Yup.string().required("Usuario requerido"),
-                password: Yup.string().required("Contraseña requerida"),
-              })}
-              onSubmit={handleSubmit}
+              initialValues={{ email: "", password: "" }}
+              onSubmit={(values) => {
+                if (values.email.length == 0 && values.password.length == 0) {
+                  toast.error("Ups! Se te ha olvidado llenar los campos", {
+                    description:
+                      "Por favor, asegúrate de completar todos los campos para poder procesar tu solicitud correctamente",
+                  });
+                  return;
+                }
+
+                for (const property in values) {
+                  if (
+                    values[property] == null ||
+                    values[property].length == 0
+                  ) {
+                    if (property == "email") {
+                      toast.error(
+                        "Ups! Se te paso por alto llenar el campo Correo"
+                      );
+                      return;
+                    } else if (property == "password") {
+                      toast.error(
+                        "Ups! Se te paso por alto llenar el campo Contraseña"
+                      );
+                      return;
+                    }
+                  }
+                }
+
+                // Verificar si el usuario esta en la BD
+                // const result = getSpecificUser(values.email, values.password);
+                // console.log(result[0].Cedula);
+
+                onSubmit(values.email, values.password);
+
+                // getSpecificUser(values.email, values.password)
+                //   .then((result) => {
+                //     // Acceder directamente a la propiedad "Cedula" del resultado
+                //     console.log("La cédula del usuario es:", result[0].Cedula);
+                //   })
+                //   .catch((error) => {
+                //     console.error(
+                //       "Hubo un error al obtener la información del usuario:",
+                //       error
+                //     );
+                //   });
+              }}
             >
-              {({ isSubmitting }) => (
+              {({ isSubmitting, handleChange, values }) => (
                 <Form>
-                  <input type="username" 
-                    name="username"
-                    placeholder="Usuario"
-                    id = "username-login"
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Correo"
+                    onChange={handleChange}
+                    value={values.email}
+                    id="username-login"
                   />
-                  <ErrorMessage name="username" component="div" />
+                  {/* <ErrorMessage name="email" component="div" /> */}
                   <div className="Password-sss">
                     <div className="password-box__container">
-                  <PasswordBox
-                  title="Password"
-                  name="password"
-                  placeHolder="ingresa tu contrasena"
-                  />
-                    <div className="password-box__eye"></div> 
-                  </div>
-                  <ErrorMessage name="password" component="div" />
+                      <PasswordBox
+                        title="Password"
+                        name="password"
+                        placeHolder="ingresa tu contrasena"
+                        handleOnchange={handleChange}
+                        value={values.password}
+                      />
+                      <div className="password-box__eye"></div>
+                    </div>
+                    {/* <ErrorMessage name="password" component="div" /> */}
                   </div>
                   <Link to="/OlvidadoTuContraseña">
                     ¿Has olvidado tu contraseña?
                   </Link>
                   <div className="container-button">
-                    <button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Cargando..." : "Ingresar"}</button>
-                
+                    <button type="submit">"Ingresar"</button>
                   </div>
                 </Form>
               )}
@@ -87,6 +134,7 @@ export default function Login() {
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }

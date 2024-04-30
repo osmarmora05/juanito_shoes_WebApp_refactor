@@ -6,7 +6,7 @@ export function AuthContextProvider({ children }) {
   const defaultUser = {
     id: 1,
     name: "osmarmora05",
-    rol: "supervisor",
+    rol: "Supervisor",
   };
 
 

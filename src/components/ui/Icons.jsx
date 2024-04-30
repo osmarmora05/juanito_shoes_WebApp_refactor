@@ -1,3 +1,45 @@
+export function RobotIcon() {
+  return (
+    <svg
+      width="84"
+      height="76"
+      viewBox="0 0 84 76"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M68 26H16C13.7909 26 12 27.7909 12 30V70C12 72.2091 13.7909 74 16 74H68C70.2091 74 72 72.2091 72 70V30C72 27.7909 70.2091 26 68 26Z"
+        stroke="#4B88A2"
+        stroke-width="4"
+      />
+      <path
+        d="M28 46C30.2091 46 32 44.2091 32 42C32 39.7909 30.2091 38 28 38C25.7909 38 24 39.7909 24 42C24 44.2091 25.7909 46 28 46Z"
+        fill="#4B88A2"
+      />
+      <path
+        d="M56 46C58.2091 46 60 44.2091 60 42C60 39.7909 58.2091 38 56 38C53.7909 38 52 39.7909 52 42C52 44.2091 53.7909 46 56 46Z"
+        fill="#4B88A2"
+      />
+      <path
+        d="M34 54C32.9391 54 31.9217 54.4214 31.1716 55.1716C30.4214 55.9217 30 56.9391 30 58C30 59.0609 30.4214 60.0783 31.1716 60.8284C31.9217 61.5786 32.9391 62 34 62V54ZM50 62C51.0609 62 52.0783 61.5786 52.8284 60.8284C53.5786 60.0783 54 59.0609 54 58C54 56.9391 53.5786 55.9217 52.8284 55.1716C52.0783 54.4214 51.0609 54 50 54V62ZM34 62H50V54H34V62Z"
+        fill="#4B88A2"
+      />
+      <path
+        d="M42 10V26M2 42V58M82 42V58"
+        stroke="#4B88A2"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M42 10C44.2091 10 46 8.20914 46 6C46 3.79086 44.2091 2 42 2C39.7909 2 38 3.79086 38 6C38 8.20914 39.7909 10 42 10Z"
+        stroke="#4B88A2"
+        stroke-width="4"
+      />
+    </svg>
+  );
+}
+
 export function CatalogueIcon({ className = "" }) {
   return (
     <svg
@@ -204,9 +246,7 @@ export function GeneralCompanyInformationIcon({ className = "" }) {
       <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
     </svg>
   );
-  
 }
-
 
 export function ReportsIcon({ className = "" }) {
   return (

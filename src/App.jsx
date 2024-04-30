@@ -5,7 +5,6 @@ import {
   useAuthContenxt,
 } from "./context/ContextAuthenticatedUser";
 import ProtectRouted from "./components/ProtectRouted";
-import NavBar from "./components/NavBar";
 import Catalogue from "./pages/dashboard/Catalogue";
 import TicketRegistration from "./pages/dashboard/TicketRegistration";
 import Orders from "./pages/dashboard/Orders";
@@ -19,7 +18,6 @@ import ForgotPassword from "./pages/ForgotPassword";
 import RecoverAccount from "./pages/RecoverAccount";
 import LayoutDashboard from "./components/LayoutDashboard";
 import ManagementItems from "./pages/dashboard/ManagementItems";
-
 
 function App() {
   return (
@@ -43,7 +41,7 @@ function AppContent() {
       <Route path="Login" element={<Login />} />
       <Route path="/OlvidadoTuContraseña" element={<ForgotPassword />} />
       <Route path="/RecuperarCuenta" element={<RecoverAccount />} />
-      
+
       <Route path="*" element={<NotFound />} />
       <Route
         path="/Panel"
@@ -53,28 +51,28 @@ function AppContent() {
           </ProtectRouted>
         }
       >
-        {hasAccess(["supervisor"]) && (
+        {hasAccess(["Supervisor"]) && (
           <Route path="Catalogo" element={<Catalogue />} />
         )}
-        {hasAccess(["bodegero", "supervisor"]) && (
+        {hasAccess(["Bodegero", "Supervisor"]) && (
           <Route path="RegistroDeEntradas" element={<TicketRegistration />} />
         )}
-        {hasAccess(["cajero", "supervisor"]) && (
+        {hasAccess(["Cajero", "Supervisor"]) && (
           <Route path="Pedidos" element={<Orders />} />
         )}
-        {hasAccess(["cajero", "supervisor"]) && (
+        {hasAccess(["Cajero", "Supervisor"]) && (
           <Route path="Stock" element={<Stock />} />
         )}
-        {hasAccess(["admin", "supervisor"]) && (
+        {hasAccess(["Admin", "Supervisor"]) && (
           <Route path="Trabajadores" element={<Stock />} />
         )}
-        {hasAccess(["supervisor"]) && (
+        {hasAccess(["Supervisor"]) && (
           <Route path="GestionDeElementos" element={<ManagementItems />} />
         )}
-        {hasAccess(["admin", "supervisor"]) && (
+        {hasAccess(["Admin", "Supervisor"]) && (
           <Route path="DatosEmpresa" element={<GeneralCompanyInformation />} />
         )}
-        {hasAccess(["admin", "supervisor"]) && (
+        {hasAccess(["Admin", "Supervisor"]) && (
           <Route path="Reportes" element={<Reports />} />
         )}
       </Route>

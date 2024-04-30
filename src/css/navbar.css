@@ -63,6 +63,7 @@
   background-color: var(--fondoNormal);
   position: absolute;
   padding: 10px;
+  border: 1px solid var(--trazo);
 }
 
 .nav__box-logout__rol {
