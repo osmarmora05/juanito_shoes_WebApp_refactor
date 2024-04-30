@@ -1,9 +1,16 @@
 import "../../css/ticketregistration.css";
 import ScreenHeader from "../../components/ScreenHeader";
 import TextBoxSearch from "../../components/ui/Inputs";
-import { PrimaryButton, RemoveButton } from "../../components/ui/Buttons";
+import {
+  PrimaryButton,
+  RemoveButton,
+  SecondaryButton,
+} from "../../components/ui/Buttons";
 import { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
+import data from "../../mockups/TicketRegistration.json";
+
+// El color no es una dependencia funcional
 
 export default function TicketRegistration() {
   const [records, setRecords] = useState([]);
@@ -16,10 +23,23 @@ export default function TicketRegistration() {
     }
   }, []);
 
+  const handleRemoveRow = (rowId) => {
+    const updatedRecords = filteredRecords.filter((row) => row.id !== rowId);
+    setFilteredRecords(updatedRecords);
+  };
+
+  const handleChangeRecords = (e) => {
+    const filteredRecords = records.filter((record) => {
+      return record.Nombre.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+
+    setFilteredRecords(filteredRecords);
+  };
+
   const COLUMNS = [
     {
       name: "ID",
-      selector: (row) => row.Id,
+      selector: (row) => row.id,
       sortable: true,
     },
 
@@ -36,11 +56,6 @@ export default function TicketRegistration() {
     {
       name: "Marca",
       selector: (row) => row.Marca,
-      sortable: true,
-    },
-    {
-      name: "Modelo",
-      selector: (row) => row.Modelo,
       sortable: true,
     },
     {
@@ -72,15 +87,18 @@ export default function TicketRegistration() {
     {
       name: "Imagen",
       selector: (row) => row.Imagen,
+      wrap: true,
       sortable: true,
     },
     {
       name: "Cantidad",
-      cell: (row) => <input type="text" />,
+      cell: (row) => <input type="text" style={{ width: "50px" }} />,
     },
     {
       name: "Acción",
-      cell: (row) => <RemoveButton />,
+      cell: (row) => (
+        <RemoveButton handleOnClick={() => handleRemoveRow(row.id)} />
+      ),
     },
   ];
 
@@ -98,13 +116,42 @@ export default function TicketRegistration() {
             <TextBoxSearch
               placeHolder={"Escriba el nombre"}
               title={"Busque en el catalogo"}
+              handleOnchange={handleChangeRecords}
             />
           </div>
 
           <PrimaryButton text={"Buscar"} />
         </div>
         {/* Table */}
-        <div style={{ width: "100%", height: "300px", overflowY: "auto" }}></div>
+        <div style={{ width: "100%", height: "300px", overflowY: "auto" }}>
+          {records.length == 0 ? (
+            <div
+              style={{
+                display: "flex",
+                height: "300px",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Vaya! Por que intentas buscar en el Catalogo
+            </div>
+          ) : (
+            <DataTable
+              columns={COLUMNS}
+              data={filteredRecords}
+              pagination
+              paginationPerPage={4}
+              highlightOnHover
+            />
+          )}
+        </div>
+
+        {records.length !== 0 ? (
+          <div className="ticketregistration__footer">
+            <SecondaryButton text={"Cancelar"} />
+            <PrimaryButton text={"Aceptar"} />
+          </div>
+        ) : null}
       </div>
     </section>
   );
