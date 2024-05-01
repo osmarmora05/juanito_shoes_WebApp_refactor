@@ -32,10 +32,7 @@ export default function Login() {
 
       navigate("/Panel");
     } catch (error) {
-      console.error(
-        "Hubo un error al obtener la información del usuario:",
-        error
-      );
+      console.error("There was an error obtaining user information:", error);
     }
   }
   return (
@@ -79,7 +76,6 @@ export default function Login() {
                   }
                 }
 
-                // Verificar si el usuario esta en la BD
                 // const result = getSpecificUser(values.email, values.password);
                 // console.log(result[0].Cedula);
 
@@ -87,7 +83,6 @@ export default function Login() {
 
                 // getSpecificUser(values.email, values.password)
                 //   .then((result) => {
-                //     // Acceder directamente a la propiedad "Cedula" del resultado
                 //     console.log("La cédula del usuario es:", result[0].Cedula);
                 //   })
                 //   .catch((error) => {
@@ -98,7 +93,7 @@ export default function Login() {
                 //   });
               }}
             >
-              {({ isSubmitting, handleChange, values }) => (
+              {({ handleChange, values }) => (
                 <Form>
                   <input
                     type="email"
@@ -108,7 +103,6 @@ export default function Login() {
                     value={values.email}
                     id="username-login"
                   />
-                  {/* <ErrorMessage name="email" component="div" /> */}
                   <div className="Password-sss">
                     <div className="password-box__container">
                       <PasswordBox
@@ -120,7 +114,6 @@ export default function Login() {
                       />
                       <div className="password-box__eye"></div>
                     </div>
-                    {/* <ErrorMessage name="password" component="div" /> */}
                   </div>
                   <Link to="/OlvidadoTuContraseña">
                     ¿Has olvidado tu contraseña?

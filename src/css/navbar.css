@@ -26,6 +26,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 478px;
   gap: 20px;
 }
 
@@ -83,6 +84,8 @@
 .nav__box-logout__rol > p {
   font-size: 10px;
   color: var(--fontDark);
+  width: 100%;
+  text-align: left;
 }
 
 .nav__box-logout__line {
@@ -93,6 +96,8 @@
 
 .nav__box-logout__name {
     font-size: 12px;
+    width: 100%;
+    text-align: left;
 }
 
 .nav__box-logout__footer {

@@ -3,18 +3,26 @@ import { createContext, useState, useMemo, useContext } from "react";
 const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
-  const defaultUser = {
-    id: 1,
-    name: "osmarmora05",
-    rol: "Supervisor",
-  };
-
-
-  const [user, setUser] = useState(typeof defaultUser !== "undefined" ? defaultUser : null);
+  const [user, setUser] = useState(() => {
+    const storedUser = window.localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
+  // console.log("Estamos en el contexto")
+  // console.log(user);
   // TODO: Add a useEffect to load the user from the API
 
   const login = (newUser) => {
     if (newUser) {
+      // console.log(user);
+      const userString = JSON.stringify({
+        id: newUser.id,
+        name: newUser.Nombre,
+        rol: newUser.Rol,
+      });
+
+      // Almacenar en localStorage
+      window.localStorage.setItem("user", userString);
+
       setUser({
         id: newUser.id,
         name: newUser.Nombre,
@@ -24,6 +32,7 @@ export function AuthContextProvider({ children }) {
   };
 
   const logout = () => {
+    window.localStorage.removeItem("user");
     setUser(null);
   };
 
