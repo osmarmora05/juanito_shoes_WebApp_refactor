@@ -51,7 +51,7 @@ export default function NavBar() {
   useEffect(() => {
     determineInitialScreen();
     const handleClick = (e) => {
-      if (!popupLogout.current.contains(e.target)) {
+      if (!popupLogout.current || !popupLogout.current.contains(e.target)) {
         setShowLogot(false);
       }
     };
