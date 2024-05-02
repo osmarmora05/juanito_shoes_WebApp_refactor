@@ -27,6 +27,7 @@
   justify-content: flex-start;
   align-items: end;
   gap: 10px;
+  position: relative;
 }
 
 .ticketregistration__box-input > div {

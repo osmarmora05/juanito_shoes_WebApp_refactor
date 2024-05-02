@@ -30,14 +30,6 @@ async function getSpecificUser(email, password) {
   } catch (e) {
     console.log("there was an error in getSpecificUser " + e);
   }
-
-  // console.log("estamos en getSpecificUser")
-
-  // const result = await pb.collection("Trabajadores").getFullList({
-  //   filter: `Correo = "${email}" && Contrasena = "${password}"`,
-  // });
-
-  // return result
 }
 
 export { getWorkers, getSpecificUser };
