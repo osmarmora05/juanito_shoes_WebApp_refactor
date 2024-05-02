@@ -10,7 +10,7 @@ export function RobotIcon() {
       <path
         d="M68 26H16C13.7909 26 12 27.7909 12 30V70C12 72.2091 13.7909 74 16 74H68C70.2091 74 72 72.2091 72 70V30C72 27.7909 70.2091 26 68 26Z"
         stroke="#4B88A2"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M28 46C30.2091 46 32 44.2091 32 42C32 39.7909 30.2091 38 28 38C25.7909 38 24 39.7909 24 42C24 44.2091 25.7909 46 28 46Z"
@@ -27,14 +27,14 @@ export function RobotIcon() {
       <path
         d="M42 10V26M2 42V58M82 42V58"
         stroke="#4B88A2"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M42 10C44.2091 10 46 8.20914 46 6C46 3.79086 44.2091 2 42 2C39.7909 2 38 3.79086 38 6C38 8.20914 39.7909 10 42 10Z"
         stroke="#4B88A2"
-        stroke-width="4"
+        strokeWidth="4"
       />
     </svg>
   );
@@ -116,10 +116,10 @@ export function StockIcon({ className = "" }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class={`icon icon-tabler icons-tabler-outline icon-tabler-cube ${className}`}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`icon icon-tabler icons-tabler-outline icon-tabler-cube ${className}`}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M21 16.008v-8.018a1.98 1.98 0 0 0 -1 -1.717l-7 -4.008a2.016 2.016 0 0 0 -2 0l-7 4.008c-.619 .355 -1 1.01 -1 1.718v8.018c0 .709 .381 1.363 1 1.717l7 4.008a2.016 2.016 0 0 0 2 0l7 -4.008c.619 -.355 1 -1.01 1 -1.718z" />
