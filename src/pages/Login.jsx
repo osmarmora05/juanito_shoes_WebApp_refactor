@@ -5,11 +5,11 @@ import { ToastContainer, toast } from "react-toastify"; // Importa ToastContaine
 import "react-toastify/dist/ReactToastify.css";
 import JuanitoStoreImage from "../../public/JuanitoStore.png";
 import React, { useState } from "react";
-import "../css/inputs.css"
-import "../css/login.css";
 import { PasswordBox } from "../components/ui/inputs";
-
 import "../components/ui/Icons";
+import "../css/inputs.css";
+import "../css/login.css";
+
 
 
 export default function Login() {
@@ -77,9 +77,10 @@ export default function Login() {
                     ¿Has olvidado tu contraseña?
                   </Link>
                   <div className="container-button">
+                    <Link to="/Panel">
                     <button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? "Cargando..." : "Ingresar"}</button>
-                
+                    </Link>
                   </div>
                 </Form>
               )}

@@ -1,0 +1,149 @@
+.catalogo__box {
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: calc(0.5rem - 2px);
+    position: absolute;
+    width: 2000px;
+}
+
+.catalogo__content {
+    display: flex;
+}
+
+
+.catalogo__columns {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.contenedor__nombre,
+.contenedor__modelo,
+.contenedor__categoria,
+.contenedor__size,
+.contenedor__color,
+.contenedor__descripcion,
+.contenedor__precio,
+.contenedor__marca{
+margin-bottom:3%;
+}
+
+.contenedor__categoria {
+    justify-content: flex-start;
+    align-items: center;
+    top: 20px;
+}
+/*Imagnes*/
+.catalogo__columns > div:nth-of-type(6){
+    grid-area: 1 / 5 / 3 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.catalogo__footer {
+    margin-top: 20px;
+}
+#nombre{
+    position: relative;
+    top: 25px;
+    width: 50%;
+    height: 30px;
+    left: -60px;
+}
+#modelo{
+    position: relative;
+    top: 25px;
+    width: 50%;
+    height: 30px;
+    left: -58px;
+}
+input{
+    border-radius: 2px ;
+}
+.contenedor__color{
+    position: relative;
+    top: -270px;
+    right: -490px;
+}
+.catalogo__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+}
+.comboBox{
+    margin-right: 40px;
+}
+.contenedor__descripcion{
+    position: relative;
+    top: -100px;
+}
+.secondaty_button{
+    margin-left: 40px;
+}
+#file{
+    position: relative;
+    top: 40px;
+    left: 100px;
+}
+#descripcion{
+    margin-top: -40px;
+    width: 50%;
+    height: 60px;
+    position: relative;
+    top: 70px;
+    left: -90px;
+}
+.contenedor__descripcion{
+    margin-bottom: 30px;
+}
+.comboBox{
+    position: relative;
+    padding-left: 10px;
+    width: 50%;
+}
+.contenedor__boton{
+    position: relative;
+    top: -34px;
+    left: 800px;
+}
+.contenedor__size{
+    position: relative;
+    right:-10px;
+    top: -160px;
+}
+
+.contenedor__imagen{
+    position: absolute;
+    top: 20px;
+    right: 250px;
+}
+.contenedor__precio{
+    position: relative;
+    top: -270px;
+    right: 500px;
+    padding-left: 15px;
+}
+.label-precio{
+    position: relative;
+    right: 460px
+}
+.contenedor__modelo{
+    position: relative;
+    top: -40px;
+}
+.contenedor__marca{
+    position: relative;
+    top: -80px;
+}
+
+.contenedor__categoria{
+    position: relative;
+    top: -110px;
+}
+.textbox__input{
+    width: 50%;
+}

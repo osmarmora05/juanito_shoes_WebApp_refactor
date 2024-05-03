@@ -1,6 +1,6 @@
 import "../../css/ticketregistration.css";
 import ScreenHeader from "../../components/ScreenHeader";
-import TextBoxSearch from "../../components/ui/Inputs";
+import TextBoxSearch from "../../components/ui/inputs";
 import {
   PrimaryButton,
   RemoveButton,

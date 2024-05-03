@@ -28,6 +28,7 @@ export default function NavBar() {
       if (!popupLogout.current.contains(e.target)) {
         setShowLogot(false);
       }
+      console.log(popupLogout);
     };
 
     const closeForm = (e) => {
@@ -67,7 +68,6 @@ export default function NavBar() {
           icon={<TicketRegistrationIcon className="nav__icon" />}
           tooltip={"Registrar productos"}
         />
-
         <NavItem
           to={"Pedidos"}
           option={"orders-nav"}
@@ -76,7 +76,6 @@ export default function NavBar() {
           icon={<OrdersIcon className="nav__icon" />}
           tooltip={"Pedidos"}
         />
-
         <NavItem
           to={"Stock"}
           option={"stock-nav"}
@@ -85,7 +84,6 @@ export default function NavBar() {
           icon={<StockIcon className="nav__icon" />}
           tooltip={"Stock"}
         />
-
         <NavItem
           to={"Trabajadores"}
           option={"workers-nav"}
@@ -94,7 +92,6 @@ export default function NavBar() {
           icon={<WorkersIcon className="nav__icon" />}
           tooltip={"Trabajadores"}
         />
-
         <NavItem
           to={"GestionDeElementos"}
           option={"managementItem-nav"}
@@ -103,7 +100,6 @@ export default function NavBar() {
           icon={<ManagementItemsIcon className="nav__icon" />}
           tooltip={"Gestion de elementos"}
         />
-
         <NavItem
           to={"DatosEmpresa"}
           option={"generalCompanyInformation-nav"}
@@ -112,7 +108,6 @@ export default function NavBar() {
           icon={<GeneralCompanyInformationIcon className="nav__icon" />}
           tooltip={"Datos generales de la empresa"}
         />
-
         <NavItem
           to={"Reportes"}
           option={"reports-nav"}
