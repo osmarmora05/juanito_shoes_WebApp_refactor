@@ -1,0 +1,22 @@
+.combobox__title {
+    display: block;
+    color: var(--fuenteNormal);
+    margin-bottom: 5px;
+    font-size: (var(--text-fontSize));
+}
+
+.combobox__select {
+    display: block;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    width: 40%;
+    border: 1px solid var(--trazo);
+    border-radius: calc(0.5rem - 2px);
+    font-size: var(--text-fontSize);
+    background-color: var(--fondoNormal);
+    color: var(--fuenteOscuro);
+    height: 2.25rem;
+}
+
+.combobox__select:focus {
+    outline: 1px solid var(--trazo);
+}

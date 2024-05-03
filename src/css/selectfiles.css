@@ -1,0 +1,37 @@
+.file-box__container {
+    position: relative;
+}
+
+.file-box {
+    height: 200px;
+    width: 330px;
+    border: 2px dashed var(--trazo);
+    color: var(--fuenteOscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: var(--text-fontSize);
+    border-radius: calc(0.5rem - 2px);
+    position: relative;
+}
+
+.file-box__container-img {
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    height: 150px;
+}
+
+.file-box__close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.file-box__img {
+    width: 215px;
+    height: 150px;
+    border-radius: 4px;
+}

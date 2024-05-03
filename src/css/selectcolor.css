@@ -1,0 +1,45 @@
+.pallette__title {
+    display: block;
+    color: var(--fuenteNormal);
+    margin-bottom: 5px;
+    font-size: (var(--text-fontSize));
+}
+
+.pallete__content {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2px;
+}
+
+.pallete__content--column {
+    flex-direction: column;
+    align-items: start;
+}
+
+.pallette__box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.pallette__outline {
+    border-radius: 9999px;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    color: var(--fuenteBotonPrimario);
+    background-color: var(--fondoNormal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pallette__item {
+    margin: 3px;
+    border-radius: 9999px;
+    width: 16px;
+    height: 16px;
+}
