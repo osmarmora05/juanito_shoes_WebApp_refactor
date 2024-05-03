@@ -3,7 +3,6 @@ import { useAuthContenxt } from "../context/ContextAuthenticatedUser";
 
 export default function ProtectRouted({ children }) {
   const { user } = useAuthContenxt();
-  
   if (!user) {
     return <Navigate to={"/Login"} />;
   }
