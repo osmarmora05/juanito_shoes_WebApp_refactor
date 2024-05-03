@@ -1,0 +1,20 @@
+.report-card {
+    border: 2px solid var(--trazo);
+    border-radius: calc(0.5rem - 2px);
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.report-card__text {
+    text-align: center;
+}
+
+.report-card:hover {
+    opacity: .9;
+}

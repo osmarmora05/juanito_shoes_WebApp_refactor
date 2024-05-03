@@ -1,0 +1,22 @@
+.reports {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-width: 95%;
+  position: relative;
+  padding: 48px 48px 0 48px;
+}
+
+.reports__content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  border: 2px solid var(--trazo);
+  border-radius: calc(0.5rem - 2px);
+  padding: 20px;
+  width: 100%;
+}
