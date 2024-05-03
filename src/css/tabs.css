@@ -1,0 +1,39 @@
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  min-width: 95%;
+  position: relative;
+  padding: 48px 48px 0 48px;
+}
+
+.tab-container__box-button {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.tab-container__button,.tab-container__button--active {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid var(--trazo);
+    background-color: var(--fondoNormal);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.tab-container__button--active {
+    background-color: var(--colorMenu);
+}
+
+.tab-container__content {
+  border: 2px solid var(--trazo);
+  border-radius: calc(0.5rem - 2px);
+  padding: 20px;
+  width: 100%;
+}

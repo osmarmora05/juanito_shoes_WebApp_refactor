@@ -3,10 +3,10 @@ import ScreenHeader from "../../components/ScreenHeader";
 import TextBoxSearch from "../../components/ui/inputs";
 import DataTable from "react-data-table-component";
 import { RemoveButton } from "../../components/ui/Buttons";
-import data from "../../mockups/pedidos.json";
 import AlertDialog from "../../components/ui/AlertDialog";
 import RemoveItem from "../../components/ui/RemoveItem";
 import "../../css/pedidos.css";
+import data from "../../mockups/pedidos.json";
 
 export default function Pedidos() {
   const [records, setRecords] = useState([]);

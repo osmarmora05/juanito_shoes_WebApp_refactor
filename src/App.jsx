@@ -1,21 +1,21 @@
 import "./css/styles.css";
 import { Route, Routes, Navigate } from "react-router-dom";
+import { AuthContextProvider } from "./context/ContextAuthenticatedUser";
 import ProtectRouted from "./components/ProtectRouted";
 import Catalogue from "./pages/dashboard/Catalogue";
-import {AuthContextProvider,useAuthContenxt} from "./context/ContextAuthenticatedUser";
-import NavBar from "./components/NavBar";
 import TicketRegistration from "./pages/dashboard/TicketRegistration";
+import Orders from "./pages/dashboard/Orders";
 import Stock from "./pages/dashboard/Stock";
 import NotFound from "./pages/404";
 import GeneralCompanyInformation from "./pages/dashboard/GeneralCompanyInformation";
 import Reports from "./pages/dashboard/Reports";
 import Login from "./pages/Login";
+import "../src/css/styles.css";
 import ForgotPassword from "./pages/ForgotPassword";
 import RecoverAccount from "./pages/RecoverAccount";
 import LayoutDashboard from "./components/LayoutDashboard";
 import ManagementItems from "./pages/dashboard/ManagementItems";
-import Orders from "./pages/dashboard/Orders";
-
+import { useAuthContenxt } from "./context/ContextAuthenticatedUser";
 
 function App() {
   return (
@@ -32,21 +32,12 @@ function AppContent() {
     return requiredRoles.includes(user.rol);
   }
 
-  return ( 
+  return (
     <Routes>
-
       <Route path="/" element={<Navigate replace to="/Panel" />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/OlvidadoTuContraseña" element={<ForgotPassword />} />
       <Route path="/RecuperarCuenta" element={<RecoverAccount />} />
-
-      <Route path="/" element={<Navigate replace to="Login" />} />
-      <Route path="*" element={<NotFound />} />
-      <Route path="Login" element={<Login />} />
-      <Route path="/OlvidadoTuContraseña" element={<ForgotPassword />} />
-      <Route path="/RecuperarCuenta" element={<RecoverAccount />} />
-      <Route path="/Catalogo" element={<Catalogue/>}/>
-
       <Route path="*" element={<NotFound />} />
       <Route
         path="/Panel/*"
