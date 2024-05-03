@@ -1,0 +1,30 @@
+.alert-dialog-blur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0 0 0 / .8);
+    z-index: 2;
+    opacity: 1;
+}
+
+.alert-dialog {
+    width: 512px;
+    height: 280px;
+    background-color: var(--fondoNormal);
+    color: var(--fuenteNormal);
+    overflow-y: auto;
+    position: relative;
+}
+
+.alert-dialog__close-btn {
+    position:absolute;
+    right: 18px;
+    top: 12px;
+}

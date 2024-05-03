@@ -1,0 +1,21 @@
+.pedidos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-width: 95%;
+    position: relative;
+    padding: 18px 10px 0 10px;
+}
+
+.pedidos > div:first-of-type {
+    width: 100%;
+}
+
+.pedidos__table {
+    border: 2px solid var(--trazo);
+    border-radius: calc(0.5rem - 2px);
+    padding: 20px;
+    width: 100%;
+}
