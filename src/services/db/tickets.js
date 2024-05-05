@@ -11,7 +11,6 @@ async function creatTickets(numberOfEntries, id_catalogue, id_worker) {
     await pb.collection("Entradas").create(data);
   } catch (e) {
     console.log("there was an error in creatTickets creatTickets " + e);
-  
     throw e;
   }
 }

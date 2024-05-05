@@ -1,0 +1,10 @@
+.generalcompanyinformation, .generalcompanyinformationTable {
+  min-width: 95%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
