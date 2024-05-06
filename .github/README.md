@@ -32,7 +32,7 @@ Para comenzar con "juanito_shoes_WebApp_refactor", siga estos sencillos pasos de
    Utilice el siguiente comando para clonar el repositorio del proyecto y navegar al directorio del proyecto:
 
    ```sh
-   https://github.com/osmarmora05/juanito_shoes_WebApp_refactor.git && cd juanito_shoes_WebApp_refactor
+   git clone https://github.com/osmarmora05/juanito_shoes_WebApp_refactor.git && cd juanito_shoes_WebApp_refactor
    ```
 
 3. **Instala las dependencias:**
