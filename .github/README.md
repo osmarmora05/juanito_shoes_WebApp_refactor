@@ -65,3 +65,12 @@ Para comenzar con "juanito_shoes_WebApp_refactor", siga estos sencillos pasos de
 <img src="https://seeklogo.com/images/P/pocketbase-logo-CA73994F09-seeklogo.com.png" alt="PocketBase Logo" width="60px"/>
 
 </div>
+
+<p align="center">
+    <b> </b>
+</p>
+
+# Autores
+
+- Osmar Adrian Mora Cerna [@osmarmora05](https://github.com/osmarmora05)
+- Andrew Jahaziel Garcia Morales [@AndrewJazi](https://github.com/AndrewJazi)
