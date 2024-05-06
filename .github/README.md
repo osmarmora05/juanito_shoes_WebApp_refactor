@@ -12,7 +12,7 @@
 
 # Descripción
 
-Este repositorio contiene el proyecto final de la clase de Desarrollo Web denominado Juanito Shoes, una empresa dedicada a la venta de calzado. La aplicación desarrollada tiene como objetivo principal simplificar el proceso de recepción de pedidos a través de una Aplicacion Web, agilizando así la gestión y mejorando la eficiencia operativa.
+Este repositorio contiene el proyecto final de la clase de Desarrollo de aplicaciones web denominado Juanito Shoes, una empresa dedicada a la venta de calzado. La aplicación desarrollada tiene como objetivo principal simplificar el proceso de recepción de pedidos a través de una Aplicacion Web, agilizando así la gestión y mejorando la eficiencia operativa.
 
 # Vista previa
 
