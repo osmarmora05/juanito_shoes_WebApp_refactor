@@ -4,9 +4,9 @@
 
 <div align="center"> 
    
-   ![GitHub last commit](https://img.shields.io/github/last-commit/osmarmora05/https%3A%2F%2Fgithub.com%2Fosmarmora05%2Fjuanito_shoes_WebApp_refactor?style=for-the-badge&color=%23fab387)
-   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/osmarmora05/https%3A%2F%2Fgithub.com%2Fosmarmora05%2Fjuanito_shoes_WebApp_refactor?style=for-the-badge&color=%2389dceb%09)
-   ![Static Badge](https://img.shields.io/badge/staus_dev?color=%23f9e2af)
+   ![GitHub last commit](https://img.shields.io/github/last-commit/osmarmora05/juanito_shoes_WebApp_refactor?style=for-the-badge&color=%23fab387)
+   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/osmarmora05/juanito_shoes_WebApp_refactor?style=for-the-badge&color=%2389dceb%09)
+   ![Static Badge](https://img.shields.io/badge/developing-DA?style=for-the-badge&color=%23f9e2af)
 
 </div>
 
